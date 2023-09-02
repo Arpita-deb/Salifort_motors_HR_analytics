@@ -61,6 +61,22 @@ This project uses a dataset called **HR_capstone_dataset.csv**. It represents 10
 
 # P(A)CE - ANALYSIS -  EDA, CHECKING MODEL ASSUMPTIONS & SELECT MODEL
 
+## Python packages used: 
+1. Operational Packages
+   
+   * NumPy - Allows for more mathematical operations in Python, provides functions for array-like objects, etc
+   * Pandas - Creation of data frames, analyzing data, cleaning data, manipulating data, performing efficient operations on large data sets
+
+2. Visualization Packages
+
+   * MatPlotLib - Easy-to-learn difficult-to-master graphing library for Python. Great for quick, exploratory graphs
+   * Seaborn - Built on top of matplotlib, allows for easier customization of plots compare to matplotlib
+   *  Plotly - Easy to create beautiful, presentation quality plots and graphs. Lots of built in functionality and can have interactive elements.
+
+3. Machine Learning Packages
+   * Sci-Kit Learn - Provides functionality for a host of machine learning models and analytical tools.
+
+
 # PA(C)E - CONSTRUCT AND EVALUATE MODEL
 
 
@@ -75,3 +91,4 @@ This project uses a dataset called **HR_capstone_dataset.csv**. It represents 10
 * [41 Employee Retention Ideas](https://thrivemap.io/employee-retention-ideas/)
 * [Seaborn - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/seaborn-a-complete-data-visualization-guide)
 * [Matplotlib - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/matplotlib-a-complete-data-visualization-guide)
+* [Plotly tutorial for beginners](https://www.kaggle.com/code/kanncaa1/plotly-tutorial-for-beginners#Line-Charts)
