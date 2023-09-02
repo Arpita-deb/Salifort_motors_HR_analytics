@@ -1,14 +1,26 @@
-# Salifort Motors HR Analytics - What will make them stick?
+# What’ll make the employee leave the company? - A study of Employee Retention in Salifort Motors
 ## Capstone Project from Google Advanced Data Analytics Professional Certificated course
 
 ## Introduction:
-The HR department at Salifort Motors wants to take some initiatives to improve employee satisfaction levels at the company. They collected data from employees, but now they don’t know what to do with it. They refer to you as a data analytics professional and ask you to provide data-driven suggestions based on your understanding of the data. They have the following question: what’s likely to make the employee leave the company?
-Your goals in this project are to analyze the data collected by the HR department and to build a model that predicts whether or not an employee will leave the company.
 
-If you can predict employees likely to quit, it might be possible to identify factors that contribute to their leaving. Because it is time-consuming and expensive to find, interview, and hire new employees, increasing employee retention will be beneficial to the company.
+Employee retention refers to the ability of a company to prevent employee turnover. In other words, it is the company's concerted efforts to retain their existing staff and keep their best employees on board in order to succeed as a business. Employee retention is often expressed as a statistic; the percentage of employees that remain in a company for a fixed time period (e.g. a quarter). To measure it, we use the following employee retention rate formula:
+
+<img src="https://resources.workable.com/wp-content/uploads/2019/08/employee_retention_formula-1.png">
+
+The Human Resource department at Salifort Motors wants to take some initiatives to improve employee satisfaction levels at the company. They collected data from employees and they want to analyse and find the answer to the question: **What’s likely to make the employee leave the company?** Predicting which employees are likely to quit, might help the company to identify factors that contribute to their leaving. A good model will help the company increase retention and job satisfaction for current employees, and save money and time training new employees.
+
+## Tools used:
+1. Python 
+2. Tableau
+3. Powerpoint
 
 ## Methodologies used:
-logistic regression model or the following machine learning models: decision tree, random forest, XGBoost
+1. Exploratory Data Analysis
+2. Descriptive Statistics
+3. Logistic regression model
+4. Decision tree
+5. Random forest
+6. XGBoost
 
 # (P)ACE - PLAN - UNDERSTANDING THE DATA IN THE PROBLEM CONTEXT
 
@@ -16,23 +28,21 @@ logistic regression model or the following machine learning models: decision tre
 Salifort Motors is a fictional French-based alternative energy vehicle manufacturer. Its global workforce of over 100,000 employees research, design, construct, validate, and distribute electric, solar, algae, and hydrogen-based vehicles. Salifort’s end-to-end vertical integration model has made it a global leader at the intersection of alternative energy and automobiles.    
 
 ## Key Stakeholders:
-Salifort’s senior leadership team
-Human Resources (HR) department team
+* Salifort’s senior leadership team
+* Human Resources (HR) department team
 
 ## Statement of the Business Task:
-design a model that predicts whether an employee will leave the company based on their job title, department, number of projects, average monthly hours, and any other relevant data points. A good model will help the company increase retention and job satisfaction for current employees, and save money and time training new employees. analyze the key factors driving employee turnover, build an effective model, and share recommendations for next steps with the leadership team. 
+Design a model that predicts whether an employee will leave the company based on their job title, department, number of projects, average monthly hours, and any other relevant data points. Analyze the key factors driving employee turnover, build an effective model, and share recommendations for next steps with the leadership team. 
 
 ## Deliverables:
-1. An executive summary with important insights and recommendation
-2. A jupyter notebook with all the codes
+1. Project Proposal
+2. An executive summary with important insights and recommendations
+3. A jupyter notebook with all the codes
    
-## Data Dictionary:
-turnover data includes both employees who choose to quit their job and employees who are let go.
-This project uses a dataset called HR_capstone_dataset.csv. It represents 10 columns of self-reported information from employees of a multinational vehicle manufacturing corporation. 
+## About the Data Set:
+This project uses a dataset called **HR_capstone_dataset.csv**. It represents 10 columns of self-reported information from employees of a multinational vehicle manufacturing corporation. The dataset contains 14,999 rows – each row is a different employee’s self-reported information and 10 columns
 
-The dataset contains:
-14,999 rows – each row is a different employee’s self-reported information
-10 columns
+### Data Dictionary:
 
 | Column Name | Type | Description |
 | :--- | :--- | :--- |
@@ -58,4 +68,10 @@ The dataset contains:
 ## Summary of the analysis:
 ## Recommendation:
 ## Limitation of the project:
+
 ## List of References:
+
+* [What is Employee Retention?](https://resources.workable.com/hr-terms/what-is-employee-retention)
+* [41 Employee Retention Ideas](https://thrivemap.io/employee-retention-ideas/)
+* [Seaborn - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/seaborn-a-complete-data-visualization-guide)
+* [Matplotlib - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/matplotlib-a-complete-data-visualization-guide)
