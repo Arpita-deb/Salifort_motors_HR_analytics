@@ -116,3 +116,4 @@ Phase 2 - Analysis
 * [Matplotlib - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/matplotlib-a-complete-data-visualization-guide)
 * [Plotly tutorial for beginners](https://www.kaggle.com/code/kanncaa1/plotly-tutorial-for-beginners#Line-Charts)
 * [Seaborn Heatmap](http://seaborn.pydata.org/generated/seaborn.heatmap.html)
+* [Seaborn Boxplot](https://seaborn.pydata.org/generated/seaborn.boxplot.html)
