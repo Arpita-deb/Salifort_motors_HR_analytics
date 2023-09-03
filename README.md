@@ -32,7 +32,7 @@ Salifort Motors is a fictional French-based alternative energy vehicle manufactu
 * Human Resources (HR) department team
 
 ## Statement of the Business Task:
-Design a model that predicts whether an employee will leave the company based on their job title, department, number of projects, average monthly hours, and any other relevant data points. Analyze the key factors driving employee turnover, build an effective model, and share recommendations for next steps with the leadership team. 
+The purpose of this project is to design a model that predicts whether an employee will leave the company based on their job title, department, number of projects, average monthly hours, and any other relevant data points. Our goal is to analyze the key factors driving employee turnover, build an effective model, and share recommendations for next steps with the leadership team. 
 
 ## Deliverables:
 1. Project Proposal
@@ -60,6 +60,15 @@ This project uses a dataset called **HR_capstone_dataset.csv**. It represents 10
 ## Data Integrity and reliability
 
 # P(A)CE - ANALYSIS -  EDA, CHECKING MODEL ASSUMPTIONS & SELECT MODEL
+
+## Data Cleaning:
+
+For spellchecking and fixing column names I've used Google sheet.
+
+* Changed the column names *Work_accident*, *Department* and *time_spend_company*  to *work_accident*, *department* and *tenure* respectively.
+* Using Find and Replace changed the lower case department and salary names to proper case, so that the names are shown properly in graphs.
+* Checked for white space using trimming.
+* Saved the new dataset as **salifort_employee_retention_data** and I'm going to use it for the analysis.
 
 ## Python packages used: 
 1. Operational Packages
