@@ -40,7 +40,7 @@ The purpose of this project is to design a model that predicts whether an employ
 3. A jupyter notebook with all the codes
    
 ## About the Data Set:
-This project uses a dataset called **HR_capstone_dataset.csv**. It represents 10 columns of self-reported information from employees of a multinational vehicle manufacturing corporation. The dataset contains 14,999 rows – each row is a different employee’s self-reported information and 10 columns
+This project uses a dataset called **HR_capstone_dataset.csv** from [kaggle](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv). It represents 10 columns of self-reported information from employees of a multinational vehicle manufacturing corporation. The dataset contains 14,999 rows – each row is a different employee’s self-reported information and 10 columns
 
 ### Data Dictionary:
 
@@ -57,7 +57,19 @@ This project uses a dataset called **HR_capstone_dataset.csv**. It represents 10
 | department | str | The employee's department |
 | salary | str | The employee's salary (low, medium, or high) |
 
-## Data Integrity and reliability
+## Data Integrity:
+
+## Reliability and Originality:
+There is no information how the data is collected or preprocessed. Since this dataset has been provided by Coursera in this capstone project we can assume its reliability and originality.
+
+## Comprehensiveness:
+The data contains information that may help us find the answer to the key question **What’s likely to make the employee leave the company?**. But there are many more reasons for an employee to leave a company. For example, personal reasons (relocating for a spouce, family or health issues), work-life balance, incompatility between employer and employee, lack of opportunity, financial reasons etc. 
+
+## Citation:
+There is no external citation for this dataset. You can visit [kaggle](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv) for basic informations.
+
+## Current:
+The dataset is created 2 years ago. Clearly it is outdated.
 
 # P(A)CE - ANALYSIS -  EDA, CHECKING MODEL ASSUMPTIONS & SELECT MODEL
 
