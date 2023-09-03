@@ -107,9 +107,12 @@ For spellchecking and fixing column names I've used Google sheet.
 ## Limitation of the project:
 
 ## List of References:
-
+Phase 1 - Planning
 * [What is Employee Retention?](https://resources.workable.com/hr-terms/what-is-employee-retention)
 * [41 Employee Retention Ideas](https://thrivemap.io/employee-retention-ideas/)
+
+Phase 2 - Analysis
 * [Seaborn - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/seaborn-a-complete-data-visualization-guide)
 * [Matplotlib - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/matplotlib-a-complete-data-visualization-guide)
 * [Plotly tutorial for beginners](https://www.kaggle.com/code/kanncaa1/plotly-tutorial-for-beginners#Line-Charts)
+* [Seaborn Heatmap](http://seaborn.pydata.org/generated/seaborn.heatmap.html)
