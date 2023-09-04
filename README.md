@@ -7,6 +7,13 @@ Employee retention refers to the ability of a company to prevent employee turnov
 
 <img src="https://resources.workable.com/wp-content/uploads/2019/08/employee_retention_formula-1.png">
 
+As businesses compete for top talent, employee retention is crucial. While some experts suggest that a 90% retention rate is a good goal, the reality is, it varies across different companies and industries. However, the ability to retain employees is universally beneficial for many reasons. 
+
+Importance of employee retention -
+1. Employee retention is a high priority for leading HR organizations today.
+2. The most effective employee retention strategies reduce overall turnover and keep high performers on board.
+3. A thoughtful and comprehensive employee retention strategy reduces the high costs associated with replacing lost employees.
+   
 The Human Resource department at Salifort Motors wants to take some initiatives to improve employee satisfaction levels at the company. They collected data from employees and they want to analyse and find the answer to the question: **What’s likely to make the employee leave the company?** Predicting which employees are likely to quit, might help the company to identify factors that contribute to their leaving. A good model will help the company increase retention and job satisfaction for current employees, and save money and time training new employees.
 
 ## Tools used:
@@ -110,8 +117,12 @@ For spellchecking and fixing column names I've used Google sheet.
 Phase 1 - Planning
 * [What is Employee Retention?](https://resources.workable.com/hr-terms/what-is-employee-retention)
 * [41 Employee Retention Ideas](https://thrivemap.io/employee-retention-ideas/)
+* [Employee Retention metrics](https://www.netsuite.com/portal/resource/articles/human-resources/employee-retention-metrics.shtml)
+* [How do you measure employee retention rate and why is it important?](https://www.linkedin.com/advice/3/how-do-you-measure-employee-retention-rate?utm_source=share&utm_medium=member_android&utm_campaign=share_via)
 
 Phase 2 - Analysis
+* [11 essential code blocks exploratory data analysis](https://www.kdnuggets.com/2021/03/11-essential-code-blocks-exploratory-data-analysis.html)
+* [10 things to do when conductiong your exploratory data analysis](https://medium.com/data-folks-indonesia/10-things-to-do-when-conducting-your-exploratory-data-analysis-eda-7e3b2dfbf812)
 * [Seaborn - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/seaborn-a-complete-data-visualization-guide)
 * [Matplotlib - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/matplotlib-a-complete-data-visualization-guide)
 * [Plotly tutorial for beginners](https://www.kaggle.com/code/kanncaa1/plotly-tutorial-for-beginners#Line-Charts)
