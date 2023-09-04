@@ -104,6 +104,40 @@ For spellchecking and fixing column names I've used Google sheet.
 3. Machine Learning Packages
    * Sci-Kit Learn - Provides functionality for a host of machine learning models and analytical tools.
 
+### Summary of the Exploratory Data Analaysis: 
+1. The dataset doesn't contain any missing value but has 3008 duplicated values. We've removed those and created a new dataset df_raw with 11991 rows.
+
+2. In the last_evaluation column, the minimum score was 0.36, it doesn't contain the score below to 0.36. In the average_monthly_hours column, it has a very large standard deviation as well as the range. The tenure has a similar situation as the last_evaluation column, there is no data for employees who worked less than 2 years.
+
+3. 'left' will be our target variable. We realize the majority class is about 83.4% of the data set, it is moderately imbalanced (~20%).
+
+4. There are 10 Departments in this dataset. The department of Sales has the highest number of employee retention.
+
+5. There are 3 salary levels in this dataset. Majority of the left employees have a low salary level, followed by medium and high. When the salary level goes up, the possibility of leaving is decreased.
+
+6. There are some outliers in the tenure variable (probably in other variables too), but since we are going to use a Tree-based model which is less sensitive to the outliers, we are not going to remove those outliers.
+
+7. The employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. The lowest satisfaction level scores were more likely given by the employees who have left the company, but we still see numbers of stayed employees given very low satisfaction scores.
+
+8. The employees who left the company had a similar but an average higher score in the last performance than the employees who stayed in the company. Majority of the employees stayed has a evaluation higher than 0.5. There are some employees who have low evaluation score, still they're working in the company. Majority of the employees who've left have a low evaluation score between 0.45 to 0.6 But some of them have higher evaluation score as well.
+
+9. When the employees only have 2 projects, the possibility of turnover is the most compared to other numbers of projects. When the employees have 3 projects, the possibilities of turn over is smallest. In addition, all the employees are left when they have 7 projects. The chance of turn over increases as employees are tasked with more projects.
+
+10. In the histogram of Satisfaction Level, we saw some employees who've left the company giving higher scores of satisfaction. When the employees leave the company, the satisfaction level is very low, except when they have 7 projects. So the employees who've 7 projects were satisfied with the company but nonetheless left the company because of some other reasons.
+
+11. The employees who left the company had more average monthly work hours than the employees who stayed in the company. By checking the average_monthly_hour, we can find 96 was the minimum monthly working hour, and 310 was the maximum monthly working hour. 149 and 156 are the most frequent monthly working hours.
+
+12. There is 63% of employees who worked over 176 hours/month. The percentage of employee who worked over 176 hours/month and left the company is around 14.56%.
+
+13. Working overtime can be a reason of low satisfaction level in employees and it might influence an employee's decision to leave.
+
+14. The employees who work in the company longer(tenure) tend to have more possibility of leaving.
+
+15. The employees who didn't experience an accident while at work were more likely to stay in the company.
+
+16. The employees who were promoted in the last 5 years were more likely to stay in the company.
+
+17. 'satisfaction_level' has more relationship with left, compared to other variables. We see the lowest satisfaction level is below 0.1, and it has a large number of employees who had the similar rate. Other than that, there are also a large number of the employees who had a satisfaction level higher than 0.56.
 
 # PA(C)E - CONSTRUCT AND EVALUATE MODEL
 
