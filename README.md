@@ -66,16 +66,16 @@ This project uses a dataset called **HR_capstone_dataset.csv** from [kaggle](htt
 
 ## Data Integrity:
 
-## Reliability and Originality:
+### Reliability and Originality:
 There is no information how the data is collected or preprocessed. Since this dataset has been provided by Coursera in this capstone project we can assume its reliability and originality.
 
-## Comprehensiveness:
+### Comprehensiveness:
 The data contains information that may help us find the answer to the key question **What’s likely to make the employee leave the company?**. But there are many more reasons for an employee to leave a company. For example, personal reasons (relocating for a spouce, family or health issues), work-life balance, incompatility between employer and employee, lack of opportunity, financial reasons etc. 
 
-## Citation:
+### Citation:
 There is no external citation for this dataset. You can visit [kaggle](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv) for basic informations.
 
-## Current:
+### Current:
 The dataset is created 2 years ago. Clearly it is outdated.
 
 # P(A)CE - ANALYSIS -  EDA, CHECKING MODEL ASSUMPTIONS & SELECT MODEL
@@ -89,7 +89,7 @@ For spellchecking and fixing column names I've used Google sheet.
 * Checked for white space using trimming.
 * Saved the new dataset as **salifort_employee_retention_data** and I'm going to use it for the analysis.
 
-## Python packages used: 
+## Python packages selected: 
 1. Operational Packages
    
    * NumPy - Allows for more mathematical operations in Python, provides functions for array-like objects, etc
@@ -104,10 +104,24 @@ For spellchecking and fixing column names I've used Google sheet.
 3. Machine Learning Packages
    * Sci-Kit Learn - Provides functionality for a host of machine learning models and analytical tools.
 
-### Summary of the Exploratory Data Analaysis: 
+## Exploratory Data Analysis:
+
+### Steps taken:
+1. Loaded the required python packages and the dataset.
+2. Had a general sense of the data using head(), info(), shape() functions.
+3. Performed descriptive statistics and calculated the mean,median, mode, maximum and minimum value of the numerical variables.
+4. Checked for null and duplicate values. Removed the duplicates and saved the data in a new dataframe.
+5. Checked for class imbalance.
+6. Visualized the distributions of numerical and categorical variables.
+7. Created Correlation matrix and Heatmap to find relations between the variables.
+8. Created visualizations like boxplot, histogram, scatterplot, bar charts and regplot to get detailed view of the dataset.
+9. Saved the data frame as a csv file to work later for regression analysis and model building.
+
+## Summary of the Exploratory Data Analaysis: 
+
 1. The dataset doesn't contain any missing value but has 3008 duplicated values. We've removed those and created a new dataset df_raw with 11991 rows.
 
-2. In the last_evaluation column, the minimum score was 0.36, it doesn't contain the score below to 0.36. In the average_monthly_hours column, it has a very large standard deviation as well as the range. The tenure has a similar situation as the last_evaluation column, there is no data for employees who worked less than 2 years.
+2. In the last_evaluation column, the minimum score was 0.36, it doesn't contain the score below 0.36. In the average_monthly_hours column, it has a very large standard deviation as well as the range. The tenure has a similar situation as the last_evaluation column, there is no data for employees who worked less than 2 years.
 
 3. 'left' will be our target variable. We realize the majority class is about 83.4% of the data set, it is moderately imbalanced (~20%).
 
@@ -115,32 +129,46 @@ For spellchecking and fixing column names I've used Google sheet.
 
 5. There are 3 salary levels in this dataset. Majority of the left employees have a low salary level, followed by medium and high. When the salary level goes up, the possibility of leaving is decreased.
 
-6. There are some outliers in the tenure variable (probably in other variables too), but since we are going to use a Tree-based model which is less sensitive to the outliers, we are not going to remove those outliers.
+6. The employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. The lowest satisfaction level scores were more likely given by the employees who have left the company, but we still see numbers of stayed employees given very low satisfaction scores.
 
-7. The employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. The lowest satisfaction level scores were more likely given by the employees who have left the company, but we still see numbers of stayed employees given very low satisfaction scores.
+7. The employees who left the company had a similar but an average higher score in the last performance than the employees who stayed in the company. Majority of the employees stayed has a evaluation higher than 0.5. There are some employees who have low evaluation score, still they're working in the company. Majority of the employees who've left have a low evaluation score between 0.45 to 0.6 But some of them have higher evaluation score as well.
 
-8. The employees who left the company had a similar but an average higher score in the last performance than the employees who stayed in the company. Majority of the employees stayed has a evaluation higher than 0.5. There are some employees who have low evaluation score, still they're working in the company. Majority of the employees who've left have a low evaluation score between 0.45 to 0.6 But some of them have higher evaluation score as well.
+8. When the employees only have 2 projects, the possibility of turnover is the most compared to other numbers of projects. When the employees have 3 projects, the possibilities of turn over is smallest. In addition, all the employees are left when they have 7 projects. The chance of turn over increases as employees are tasked with more projects.
 
-9. When the employees only have 2 projects, the possibility of turnover is the most compared to other numbers of projects. When the employees have 3 projects, the possibilities of turn over is smallest. In addition, all the employees are left when they have 7 projects. The chance of turn over increases as employees are tasked with more projects.
+9. In the histogram of Satisfaction Level, we saw some employees who've left the company giving higher scores of satisfaction. When the employees leave the company, the satisfaction level is very low, except when they have 7 projects. So the employees who've 7 projects were satisfied with the company but nonetheless left the company because of some other reasons.
 
-10. In the histogram of Satisfaction Level, we saw some employees who've left the company giving higher scores of satisfaction. When the employees leave the company, the satisfaction level is very low, except when they have 7 projects. So the employees who've 7 projects were satisfied with the company but nonetheless left the company because of some other reasons.
+10. The employees who left the company had more average monthly work hours than the employees who stayed in the company. By checking the average_monthly_hour, we can find 96 was the minimum monthly working hour, and 310 was the maximum monthly working hour. 149 and 156 are the most frequent monthly working hours.
 
-11. The employees who left the company had more average monthly work hours than the employees who stayed in the company. By checking the average_monthly_hour, we can find 96 was the minimum monthly working hour, and 310 was the maximum monthly working hour. 149 and 156 are the most frequent monthly working hours.
+11. There is 63% of employees who worked over 176 hours/month. The percentage of employee who worked over 176 hours/month and left the company is around 14.56%.
 
-12. There is 63% of employees who worked over 176 hours/month. The percentage of employee who worked over 176 hours/month and left the company is around 14.56%.
+12. Working overtime can be a reason of low satisfaction level in employees and it might influence an employee's decision to leave.
 
-13. Working overtime can be a reason of low satisfaction level in employees and it might influence an employee's decision to leave.
+13. The employees who work in the company longer(tenure) tend to have more possibility of leaving.
 
-14. The employees who work in the company longer(tenure) tend to have more possibility of leaving.
+14. The employees who didn't experience an accident while at work were more likely to stay in the company.
 
-15. The employees who didn't experience an accident while at work were more likely to stay in the company.
+15. The employees who were promoted in the last 5 years were more likely to stay in the company.
 
-16. The employees who were promoted in the last 5 years were more likely to stay in the company.
+16. 'satisfaction_level' has more relationship with left, compared to other variables. We see the lowest satisfaction level is below 0.1, and it has a large number of employees who had the similar rate. Other than that, there are also a large number of the employees who had a satisfaction level higher than 0.56.
 
-17. 'satisfaction_level' has more relationship with left, compared to other variables. We see the lowest satisfaction level is below 0.1, and it has a large number of employees who had the similar rate. Other than that, there are also a large number of the employees who had a satisfaction level higher than 0.56.
+### Recommendations based on EDA on Employee Retention:
+
+1. Sales department of Salifort Motors has the highest retention rate. The leadership and HR team should look into the matter further.
+2. If the company wants to keep the talent in the company, they must reduce the working hours for overworked employees.
+3. They should look into the matter when employees with high satisfaction level and evaluation score still leaving the company.
+
+### Some questions for further research:
+
+The HR department can look further into the matter by asking the following questions:
+1. Why 63% of the total employees worked overtime? Is overtime a reason for low satisfaction level among the employees?
+2. Why do sales department has highest retention rate?
+3. Is number of project and promotions are given unjustly to employees?
+4. Why employees with high satisfaction level and evaluation score still left the company? Is there other factors affecting the employee retention?
 
 # PA(C)E - CONSTRUCT AND EVALUATE MODEL
 
+## 1. Logistic Regression Model
+## 2. 
 
 # PAC(E) - EXECUTE- INTERPRET MODEL AND SHARE STORY
 ## Summary of the analysis:
@@ -162,3 +190,6 @@ Phase 2 - Analysis
 * [Plotly tutorial for beginners](https://www.kaggle.com/code/kanncaa1/plotly-tutorial-for-beginners#Line-Charts)
 * [Seaborn Heatmap](http://seaborn.pydata.org/generated/seaborn.heatmap.html)
 * [Seaborn Boxplot](https://seaborn.pydata.org/generated/seaborn.boxplot.html)
+
+Phase 3 - Construct
+* Logistic Regression Model:
