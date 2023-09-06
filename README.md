@@ -187,10 +187,27 @@ Steps taken:
 
 Summary of the Logistic Regression Model:
 
-![Screenshot (601)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/710d2a8e-44a9-48a4-9406-d65494c8da31)
+* Parameter estimators:
+* Intercept(β0): 0.48142912
+* Slope (β1): -3.758437
+* Accuracy: 0.8713173985547527
+* Precision: 0.972972972972973
+* Recall: 0.23880597014925373
+* Specificity: 0.9986644407345576
+* F1 score: 0.38348868175765644
+* Roc aoc score: 0.6187352054419057
 
 ![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea)
 
+True negatives: The count of observations that the classifier correctly predicted as False (0). In this case , the classifier correctly predicted 2991 employees who didn't leave.
+
+True positives: The count of observations that a classifier correctly predicted as True (1) i.e. the classifier correctly predicted 144 employees who left.
+
+False positives: The count of observations that a classifier incorrectly predicted as True (1) i.e. the classifier predicted 4 employees who didn't leave but in reality who left.
+
+False negatives: The count of observations that a classifier incorrectly predicted as False (0). In this case, the classifier predicted 459 employees who left but in reality who didn't leave the company.
+
+The False negatives may cause the company to spend more resources on an employee who decides to leave. The False positives may cause the company to think an employee will leave and won't put resources into this employee. False negatives will be worse for the company, false positives will be worse for employees.
 
 Limitation of the model and ethical considerations:
 
