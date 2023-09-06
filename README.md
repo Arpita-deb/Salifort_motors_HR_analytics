@@ -168,6 +168,29 @@ The HR department can look further into the matter by asking the following quest
 # PA(C)E - CONSTRUCT AND EVALUATE MODEL
 
 ## 1. Logistic Regression Model
+The goal of this project is to find out which factor(s) will make the employee leave the company. From Exploratory Data Analysis we've found that 'left' is our predictor variable, i.e. we want to figure out whether or not an employee will leave the company. It is clearly a categorical variable.  Moreover, from correlation matrix and heatmap we found out that satisfactory level is positively correlated with left variable. So we'll create a logistic regression model with satisfaction level as our independent variable and left as our dependent/predictor varaiable.
+
+The assumptions of Logistic Regression Model:
+1. The dependent variable is categorical and binary / dichotomous.
+2. There is little or no multicollinearity between the independent variables.
+3. There is linear relationship of variables to log odds.
+4. Requires sufficiently large sample size
+5. There are no extreme outliers.
+6. We have independent observations.
+
+Steps taken: 
+1. Import packages, functions, and classes
+2. Get data to work with and, if appropriate, transform it
+3. Create a classification model and train (or fit) it with existing data
+4. Predicting the test result
+5. Test accuracy of the result(Creation of Confusion matrix)
+
+Interpretation of the result:
+
+Limitation of the model and ethical considerations:
+
+
+
 ## 2. 
 
 # PAC(E) - EXECUTE- INTERPRET MODEL AND SHARE STORY
@@ -192,4 +215,9 @@ Phase 2 - Analysis
 * [Seaborn Boxplot](https://seaborn.pydata.org/generated/seaborn.boxplot.html)
 
 Phase 3 - Construct
-* Logistic Regression Model:
+* [Confusion Matrix](https://youtu.be/Kdsp6soqA7o?si=5fiS9byN5i13ODRx)
+* [Logistic Regression Explained](https://youtu.be/yIYKR4sgzI8?si=IEurObJZiTn75BWV)
+* [What Is Logistic Regression? Equation, Assumptions, Types, and Best Practices](https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/amp/)
+* [Assumptions of Logistic Regression](https://www.statology.org/assumptions-of-logistic-regression/)
+* [Reference guide for interpreting the logistic regression model](https://docs.google.com/document/d/1Pi3JxADgy0-JGO_mcRvBPWPavyS6kR8jEQtVIemHkt4/edit?usp=sharing)
+* [Reference guide for common Logistic Regression metrics in Python](https://docs.google.com/document/d/1HZoQyvdeGq0rJiMSos3bMC2hDt6vBgs41hQYEk8RSeI/edit?usp=sharing)
