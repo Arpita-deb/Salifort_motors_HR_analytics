@@ -185,7 +185,12 @@ Steps taken:
 4. Predicting the test result
 5. Test accuracy of the result(Creation of Confusion matrix)
 
-Interpretation of the result:
+Summary of the Logistic Regression Model:
+
+![Screenshot (601)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/710d2a8e-44a9-48a4-9406-d65494c8da31)
+
+![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea)
+
 
 Limitation of the model and ethical considerations:
 
