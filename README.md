@@ -29,6 +29,8 @@ The Human Resource department at Salifort Motors wants to take some initiatives 
 5. Random forest
 6. XGBoost
 
+![PACE workflow](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/cQcDvRmNS1Cpr_t3edsQIg_c359c3e9e9d64046a955cb85f2a1f8f1_ADA_R-142_PACE-Model.png?expiry=1694217600000&hmac=3LHlpiNEjbA8dqGGDpBZM16TzJr5j3b1Dy3b1IX2unI)
+
 # (P)ACE - PLAN - UNDERSTANDING THE DATA IN THE PROBLEM CONTEXT
 
 ## About the Company:
@@ -190,12 +192,12 @@ Summary of the Logistic Regression Model:
 * Parameter estimators:
 * Intercept(β0): 0.48142912
 * Slope (β1): -3.758437
-* Accuracy: 0.8713173985547527
-* Precision: 0.972972972972973
-* Recall: 0.23880597014925373
-* Specificity: 0.9986644407345576
-* F1 score: 0.38348868175765644
-* Roc aoc score: 0.6187352054419057
+* Accuracy: 0.8713
+* Precision: 0.9729
+* Recall: 0.2388
+* Specificity: 0.9986
+* F1 score: 0.3834
+* Roc aoc score: 0.6187
 
 ![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea)
 
@@ -243,3 +245,4 @@ Phase 3 - Construct
 * [Assumptions of Logistic Regression](https://www.statology.org/assumptions-of-logistic-regression/)
 * [Reference guide for interpreting the logistic regression model](https://docs.google.com/document/d/1Pi3JxADgy0-JGO_mcRvBPWPavyS6kR8jEQtVIemHkt4/edit?usp=sharing)
 * [Reference guide for common Logistic Regression metrics in Python](https://docs.google.com/document/d/1HZoQyvdeGq0rJiMSos3bMC2hDt6vBgs41hQYEk8RSeI/edit?usp=sharing)
+  
