@@ -206,6 +206,7 @@ The False negatives may cause the company to spend more resources on an employee
 
 ## Summary of the analysis:
 
+![Screenshot (609)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/31ceedc5-e204-4874-bbc7-dd881441056f)
 
 ## Recommendation:
 
