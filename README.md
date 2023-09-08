@@ -169,47 +169,41 @@ The HR department can look further into the matter by asking the following quest
 
 # PA(C)E - CONSTRUCT AND EVALUATE MODEL
 
-## 1. Logistic Regression Model
-The goal of this project is to find out which factor(s) will make the employee leave the company. From Exploratory Data Analysis we've found that 'left' is our predictor variable, i.e. we want to figure out whether or not an employee will leave the company. It is clearly a categorical variable.  Moreover, from correlation matrix and heatmap we found out that satisfactory level is positively correlated with left variable. So we'll create a logistic regression model with satisfaction level as our independent variable and left as our dependent/predictor varaiable.
-
-The assumptions of Logistic Regression Model:
-1. The dependent variable is categorical and binary / dichotomous.
-2. There is little or no multicollinearity between the independent variables.
-3. There is linear relationship of variables to log odds.
-4. Requires sufficiently large sample size
-5. There are no extreme outliers.
-6. We have independent observations.
-
-Steps taken: 
+## Steps taken to build the models: 
 1. Import packages, functions, and classes
 2. Get data to work with and, if appropriate, transform it
 3. Create a classification model and train (or fit) it with existing data
 4. Predicting the test result
 5. Test accuracy of the result(Creation of Confusion matrix)
 
-Summary of the Logistic Regression Model:
+## Evaluation metrics:
 
-* Parameter estimators:
-* Intercept(β0): 0.48142912
-* Slope (β1): -3.758437
-* Accuracy: 0.8713
-* Precision: 0.9729
-* Recall: 0.2388
-* Specificity: 0.9986
-* F1 score: 0.3834
-* Roc aoc score: 0.6187
+1. Accuracy score:  Refers to the proportion of data points that were correctly categorized. Accuracy is an appropriate metric to use when the data is balanced, in other words, when the data has a roughly equal number of positive examples and negative examples. Otherwise, accuracy can be biased.
+2. Recall score: The proportion of positives the model was able to identify correctly. 
+3. Precision Score: The proportion of positive predictions that were true positives. 
+4. F1 score: It’s a harmonic mean of “precision” & “recall”, taking both the metrics into account.
+5. Confusion matrix: A graphical representation of how accurate a classifier is at predicting the labels for a categorical variable*
+   * True negatives: The count of observations that the classifier correctly predicted as False (0). In this case , the classifier correctly predicted 2991 employees who didn't leave.
 
-![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea)
+   * True positives: The count of observations that a classifier correctly predicted as True (1) i.e. the classifier correctly predicted 144 employees who left.
 
-True negatives: The count of observations that the classifier correctly predicted as False (0). In this case , the classifier correctly predicted 2991 employees who didn't leave.
+   * False positives: The count of observations that a classifier incorrectly predicted as True (1) i.e. the classifier predicted 4 employees who didn't leave but in reality who left.
 
-True positives: The count of observations that a classifier correctly predicted as True (1) i.e. the classifier correctly predicted 144 employees who left.
-
-False positives: The count of observations that a classifier incorrectly predicted as True (1) i.e. the classifier predicted 4 employees who didn't leave but in reality who left.
-
-False negatives: The count of observations that a classifier incorrectly predicted as False (0). In this case, the classifier predicted 459 employees who left but in reality who didn't leave the company.
+   * False negatives: The count of observations that a classifier incorrectly predicted as False (0). In this case, the classifier predicted 459 employees who left but in reality who didn't leave the company.
 
 The False negatives may cause the company to spend more resources on an employee who decides to leave. The False positives may cause the company to think an employee will leave and won't put resources into this employee. False negatives will be worse for the company, false positives will be worse for employees.
+
+
+# Results of the models :
+| Model | Accuracy | Recall | Precision | F1 Score | Confusion matrix |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Logistic Regression | 0.871 | 0.239 | 0.973 | 0.383 | ![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea) |
+| Single Decision tree | 0.967 | 0.920 | 0.884 | 0.902 |  |
+| Decision Tree with Hyperparameter tuning and Grid Search | 0.982 | 0.932 | 0.961 | 0.946 |  |
+| Random Forest | 0.984 | 0.916 | 0.987 | 0.950 |  |
+| XG Boost Model | 0.985 | 0.928 | 0.979 | 0.953 |  |
+
+
 
 Limitation of the model and ethical considerations:
 
