@@ -208,6 +208,10 @@ The False negatives may cause the company to spend more resources on an employee
 
 ![Screenshot (609)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/31ceedc5-e204-4874-bbc7-dd881441056f)
 
+
+![Screenshot (621)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/df242505-5c64-4e38-b906-8092bf98794b)
+
+
 ## Recommendation:
 
 By plotting the most important feature, we notice average_monthly_hours, satisfaction_level and last_evaluation are the top 3 important features for predicting if an employee will leave or not.     
