@@ -178,43 +178,62 @@ The HR department can look further into the matter by asking the following quest
 
 ## Evaluation metrics:
 
-1. Accuracy score:  Refers to the proportion of data points that were correctly categorized. Accuracy is an appropriate metric to use when the data is balanced, in other words, when the data has a roughly equal number of positive examples and negative examples. Otherwise, accuracy can be biased.
-2. Recall score: The proportion of positives the model was able to identify correctly. 
-3. Precision Score: The proportion of positive predictions that were true positives. 
-4. F1 score: It’s a harmonic mean of “precision” & “recall”, taking both the metrics into account.
-5. Confusion matrix: A graphical representation of how accurate a classifier is at predicting the labels for a categorical variable*
-   * True negatives: The count of observations that the classifier correctly predicted as False (0). In this case , the classifier correctly predicted 2991 employees who didn't leave.
+1. **Accuracy score** :  Refers to the proportion of data points that were correctly categorized. Accuracy is an appropriate metric to use when the data is balanced, in other words, when the data has a roughly equal number of positive examples and negative examples. Otherwise, accuracy can be biased.
+2. **Recall score**: The proportion of positives the model was able to identify correctly. 
+3. **Precision Score**: The proportion of positive predictions that were true positives. 
+4. **F1 score**: It’s a harmonic mean of “precision” & “recall”, taking both the metrics into account.
+5. **Confusion matrix**: A graphical representation of how accurate a classifier is at predicting the labels for a categorical variable*
+   * True negatives: The count of observations that the classifier correctly predicted as False (0). In this case , the classifier will correctly predict the employees who didn't leave.
 
-   * True positives: The count of observations that a classifier correctly predicted as True (1) i.e. the classifier correctly predicted 144 employees who left.
+   * True positives: The count of observations that a classifier correctly predicted as True (1) i.e. the classifier will correctly predict the employees who left.
 
-   * False positives: The count of observations that a classifier incorrectly predicted as True (1) i.e. the classifier predicted 4 employees who didn't leave but in reality who left.
+   * False positives: The count of observations that a classifier incorrectly predicted as True (1) i.e. the classifier will predict employees as left but in reality who stayed.
 
-   * False negatives: The count of observations that a classifier incorrectly predicted as False (0). In this case, the classifier predicted 459 employees who left but in reality who didn't leave the company.
+   * False negatives: The count of observations that a classifier incorrectly predicted as False (0). In this case, the classifier will incorrectly predict employees as stayd but in reality who left.
 
-The False negatives may cause the company to spend more resources on an employee who decides to leave. The False positives may cause the company to think an employee will leave and won't put resources into this employee. False negatives will be worse for the company, false positives will be worse for employees.
-
+The False negatives may cause the company to spend more resources on an employee who decides to leave. The False positives may cause the company to think an employee will leave and won't put resources on this employee. False negatives will be worse for the company, false positives will be worse for employees.
 
 # Results of the models :
 | Model | Accuracy | Recall | Precision | F1 Score | Confusion matrix |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Logistic Regression | 0.871 | 0.239 | 0.973 | 0.383 | ![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea) |
-| Single Decision tree | 0.967 | 0.920 | 0.884 | 0.902 |  |
-| Decision Tree with Hyperparameter tuning and Grid Search | 0.982 | 0.932 | 0.961 | 0.946 |  |
-| Random Forest | 0.984 | 0.916 | 0.987 | 0.950 |  |
-| XG Boost Model | 0.985 | 0.928 | 0.979 | 0.953 |  |
-
-
-
-Limitation of the model and ethical considerations:
-
-
-
-## 2. 
+| Single Decision tree | 0.967 | 0.920 | 0.884 | 0.902 | ![dt wo grid](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/13bda057-1db3-441e-b606-474acf79a941) |
+| Decision Tree with Hyperparameter tuning and Grid Search | 0.982 | 0.932 | 0.961 | 0.946 | ![cm dt with grid (2)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/96a86fc7-05e8-4de8-9a71-853bcefe2f74) |
+| Random Forest | 0.984 | 0.916 | 0.987 | 0.950 | ![cm random forest (2)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/4975e7e2-771f-4092-aaa2-a1084e92821a) |
+| XG Boost Model | 0.985 | 0.928 | 0.979 | 0.953 | ![cm xgboost (2)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/781987b6-0c9a-4df5-b0e0-32c7044b6a4e) |
 
 # PAC(E) - EXECUTE- INTERPRET MODEL AND SHARE STORY
+
 ## Summary of the analysis:
+
+
 ## Recommendation:
+
+By plotting the most important feature, we notice average_monthly_hours, satisfaction_level and last_evaluation are the top 3 important features for predicting if an employee will leave or not.     
+* Compared to different salary (level), the employees who have a low salary will likely lead the retention of the company.     
+* Compared to different department, the employees in the sales department will likely lead the retention of the company.
+Our dataset has much less data for the employees who were left than the employees who stayed. It also impacts our evaluation results and confusion matrix. We recommend gaining more data for the employees who were left.
+* We only have 10 departments in this dataset, it's better to know how many departments there are in the company.
+* For the salary, it's better to build this feature with numerical data that shows how much the employee earns in a certain period of time. The level of salary is not clear enough.
+
+What business recommendations do you propose based on the models built?
+As we mentioned above, average_monthly_hours is the most important feature to drive employees' retention. Combining the EDA results, we found that 63% of employees in the company work over time. Plus the employees who left the company had more average monthly work hours than the employees who stayed in the company. We recommend significantly reducing the chance of working over time.
+The employees who left the company usually spent more time on the project, the reason can be: 1) less investment in training, and upskilling; 2) get more complicated projects that need more time of working; 3) less familiar with the project...etc. We need to find the reasons in order to reduce the high rate of turnover.
+Overflow seems like an issue for the company.
+We are concerned about whether the projects have been given to employees fairly.
+In satisfaction_level, we knew the employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. And satisfaction level is the second important feature of driving employees' retention. Other than the points we just mentioned, we also recommend working on analysing the trends of satisfaction_level.
+As the low level of salary is likely to lead to the retention of the company, we can work with this group more in order to increase their satisfaction level.
+
+We built a Random Forest model to predict whether or not an employee will leave the company, the f1 score is as high as 0.96 and AUC is around 0.96, which are the good of a prediction model.
+We recommend the company reduce the chance of working over time and overflow. Also, setup a policy that can give the project fairly.
+Invest the group who have lower salaries in order to increase their satisfaction level.
+Increase the chance of promotion.
+Next Steps:
+We should get more data of employees who left the company
+We can work on analysing the trends of satisfaction_level.
 ## Limitation of the project:
+
+
 
 ## List of References:
 Phase 1 - Planning
@@ -233,10 +252,21 @@ Phase 2 - Analysis
 * [Seaborn Boxplot](https://seaborn.pydata.org/generated/seaborn.boxplot.html)
 
 Phase 3 - Construct
-* [Confusion Matrix](https://youtu.be/Kdsp6soqA7o?si=5fiS9byN5i13ODRx)
-* [Logistic Regression Explained](https://youtu.be/yIYKR4sgzI8?si=IEurObJZiTn75BWV)
-* [What Is Logistic Regression? Equation, Assumptions, Types, and Best Practices](https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/amp/)
-* [Assumptions of Logistic Regression](https://www.statology.org/assumptions-of-logistic-regression/)
-* [Reference guide for interpreting the logistic regression model](https://docs.google.com/document/d/1Pi3JxADgy0-JGO_mcRvBPWPavyS6kR8jEQtVIemHkt4/edit?usp=sharing)
-* [Reference guide for common Logistic Regression metrics in Python](https://docs.google.com/document/d/1HZoQyvdeGq0rJiMSos3bMC2hDt6vBgs41hQYEk8RSeI/edit?usp=sharing)
+1. Logistic Regression
+   * [Confusion Matrix](https://youtu.be/Kdsp6soqA7o?si=5fiS9byN5i13ODRx)
+   * [Logistic Regression Explained](https://youtu.be/yIYKR4sgzI8?si=IEurObJZiTn75BWV)
+   * [What Is Logistic Regression? Equation, Assumptions, Types, and Best Practices](https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/amp/)
+   * [Assumptions of Logistic Regression](https://www.statology.org/assumptions-of-logistic-regression/)
+   * [Reference guide for interpreting the logistic regression model](https://docs.google.com/document/d/1Pi3JxADgy0-JGO_mcRvBPWPavyS6kR8jEQtVIemHkt4/edit?usp=sharing)
+   * [Reference guide for common Logistic Regression metrics in Python](https://docs.google.com/document/d/1HZoQyvdeGq0rJiMSos3bMC2hDt6vBgs41hQYEk8RSeI/edit?usp=sharing)
+2. Decision Tree
+   * [Decision Learning Model Learning](https://www.coursera.org/articles/decision-tree-machine-learning)
+   * [Machine Learning decision tree classification algorithm](https://www.javatpoint.com/machine-learning-decision-tree-classification-algorithm)
+3. Random Forest Classifier
+   * [Machine Learning Random Forest classification algorithm](https://www.javatpoint.com/machine-learning-random-forest-algorithm)
+   * [StatQuest: Random Forests Part 1 - Building, Using and Evaluating](https://youtu.be/J4Wdy0Wc_xQ?si=S0u2sWWOTNjOcjRC)
+   * [StatQuest: Bootstrapping Main Ideas!!!](https://youtu.be/Xz0x-8-cgaQ?si=pqVVwhfUYOQ8-jQ6)
+   * [Ensembles - Kaggle Notebook](https://www.kaggle.com/code/kashnitsky/topic-5-ensembles-part-1-bagging/notebook)
+3. XGBoost
+   * [XGBoost Parameters](https://xgboost.readthedocs.io/en/latest/parameter.html)
   
