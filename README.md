@@ -1,5 +1,5 @@
-# What’ll make the employee leave the company? - A study of Employee Retention in Salifort Motors
-## Capstone Project from Google Advanced Data Analytics Professional Certificated course
+# Retaining Talents, Unleashing Possibilities - A study of Employee Retention in Salifort Motors
+## Capstone Project from Google Advanced Data Analytics Professional Certification Course
 
 ## Introduction:
 
@@ -155,7 +155,7 @@ For spellchecking and fixing column names I've used Google sheet.
 
 ### Recommendations based on EDA on Employee Retention:
 
-1. Sales department of Salifort Motors has the highest retention rate. The leadership and HR team should look into the matter further.
+1. Sales department of Salifort Motors has the lowest retention rate. The leadership and HR team should look into the matter further.
 2. If the company wants to keep the talent in the company, they must reduce the working hours for overworked employees.
 3. They should look into the matter when employees with high satisfaction level and evaluation score still leaving the company.
 
@@ -163,7 +163,7 @@ For spellchecking and fixing column names I've used Google sheet.
 
 The HR department can look further into the matter by asking the following questions:
 1. Why 63% of the total employees worked overtime? Is overtime a reason for low satisfaction level among the employees?
-2. Why do sales department has highest retention rate?
+2. Why do sales department has lowest retention rate?
 3. Is number of project and promotions are given unjustly to employees?
 4. Why employees with high satisfaction level and evaluation score still left the company? Is there other factors affecting the employee retention?
 
@@ -204,41 +204,39 @@ The False negatives may cause the company to spend more resources on an employee
 
 # PAC(E) - EXECUTE- INTERPRET MODEL AND SHARE STORY
 
-## Summary of the analysis:
-
-![Screenshot (609)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/31ceedc5-e204-4874-bbc7-dd881441056f)
-
-
 ![Screenshot (621)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/df242505-5c64-4e38-b906-8092bf98794b)
 
+## Summary of the analysis:
+
+In this project we've - 
+1. Performed Exploratory Data Analysis on the HR_dataset provided by the HR team of Salifort Motors.
+2. Visualized the relations between various variables and found out our predictor variable 'left'.
+3. We've created 4 different models whose performance is evaluated by how many employees they've correctly predicted as left and stayed.
+4. Among the models, Logistic Regression model performed worst with an f1 score of 0.383.
+5. The best performing model is a Gradient boosted decision tree or an XGBoost model with f1 score of 0.953, which is a good evaluation score for a prediction model.
+6. From the graph of Feature Importance we can clearly see which feature(variable) influences most the employee retention in the company. Average_monthly_hours, satisfaction_level and last_evaluation are the top 3 important features for predicting if an employee will leave or not.
+7. Compared to different salary levels, the employees who have a low salary are most likely to leave the company.
+8. Compared to different departments, the employees in Sales are most likely to leave the company.
 
 ## Recommendation:
 
-By plotting the most important feature, we notice average_monthly_hours, satisfaction_level and last_evaluation are the top 3 important features for predicting if an employee will leave or not.     
-* Compared to different salary (level), the employees who have a low salary will likely lead the retention of the company.     
-* Compared to different department, the employees in the sales department will likely lead the retention of the company.
-Our dataset has much less data for the employees who were left than the employees who stayed. It also impacts our evaluation results and confusion matrix. We recommend gaining more data for the employees who were left.
-* We only have 10 departments in this dataset, it's better to know how many departments there are in the company.
+* Our dataset has much less data for the employees who were left than the employees who stayed. It also impacts our evaluation results and confusion matrix. We recommend gaining more data for the employees who were left before implementing the model in use.
+* We only have 10 departments in this dataset, it's better to know whether there are other departments in the company.
 * For the salary, it's better to build this feature with numerical data that shows how much the employee earns in a certain period of time. The level of salary is not clear enough.
+* As we mentioned above, average_monthly_hours is the most important feature to drive employees' retention. Combining the EDA results, we found that 63% of employees in the company worked over time. Plus the employees who left the company had more average monthly work hours than the employees who stayed in the company. We recommend significant reducing in the chance of working over time.
+* The employees who left the company usually spent more time on the project, the reason can be:
+  1) less investment on training, and upskilling the employees
+  2) get more complicated projects that need more time of working
+  3) less familiarity with the project
+  We need to find the reasons in order to reduce the high rate of turnover. We are concerned about whether the projects have been given to employees fairly. We recommend the company to setup a policy that can overlook the entire wellbeing and performance of the employees.
+* In satisfaction_level, we knew the employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. And satisfaction level is the second important feature of driving employees' retention. Other than the points we just mentioned, we also recommend working on analysing the trends of satisfaction_level, to find out its correlation with other variables which hasn't been done in this project.
+* As the low level of salary is likely to lead to the retention of the company, we can work with this group more in order to increase their satisfaction level.
+* We also recommend to increase the chances of promotion across the departments and the salary levels.
 
-What business recommendations do you propose based on the models built?
-As we mentioned above, average_monthly_hours is the most important feature to drive employees' retention. Combining the EDA results, we found that 63% of employees in the company work over time. Plus the employees who left the company had more average monthly work hours than the employees who stayed in the company. We recommend significantly reducing the chance of working over time.
-The employees who left the company usually spent more time on the project, the reason can be: 1) less investment in training, and upskilling; 2) get more complicated projects that need more time of working; 3) less familiar with the project...etc. We need to find the reasons in order to reduce the high rate of turnover.
-Overflow seems like an issue for the company.
-We are concerned about whether the projects have been given to employees fairly.
-In satisfaction_level, we knew the employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. And satisfaction level is the second important feature of driving employees' retention. Other than the points we just mentioned, we also recommend working on analysing the trends of satisfaction_level.
-As the low level of salary is likely to lead to the retention of the company, we can work with this group more in order to increase their satisfaction level.
-
-We built a Random Forest model to predict whether or not an employee will leave the company, the f1 score is as high as 0.96 and AUC is around 0.96, which are the good of a prediction model.
-We recommend the company reduce the chance of working over time and overflow. Also, setup a policy that can give the project fairly.
-Invest the group who have lower salaries in order to increase their satisfaction level.
-Increase the chance of promotion.
-Next Steps:
-We should get more data of employees who left the company
-We can work on analysing the trends of satisfaction_level.
 ## Limitation of the project:
-
-
+1. Our dataset is imbalanced i.e. it has much less data for the employees who left than the employees who stayed. It also impacts our evaluation results and confusion matrix. Class Imbalance can be a huge disadvantage for building advanced machine learning models.
+2. The data hasn't been cross-validated before implementing the models. Before testing the models on test data, they should be vigorously tested on training and validation set to ensure accurate and trustworthy performance of the models.
+3. We've used only 5 matrices for evaluating the performances of the models. There are many more hyperparameters and  matrices that will help us tune and evaluate a better performing model.  
 
 ## List of References:
 Phase 1 - Planning
