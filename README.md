@@ -17,9 +17,9 @@ Importance of employee retention -
 The Human Resource department at Salifort Motors wants to take some initiatives to improve employee satisfaction levels at the company. They collected data from employees and they want to analyse and find the answer to the question: **What’s likely to make the employee leave the company?** Predicting which employees are likely to quit, might help the company to identify factors that contribute to their leaving. A good model will help the company increase retention and job satisfaction for current employees, and save money and time training new employees.
 
 ## Tools used:
-1. Python 
-2. Tableau
-3. Powerpoint
+1. Excel - for initial data cleaning
+2. Python - for Exploratory Data Analysis and building machine learning model
+3. Powerpoint - to create Project Proposal and executive summary
 
 ## Methodologies used:
 1. Exploratory Data Analysis
@@ -119,7 +119,7 @@ For spellchecking and fixing column names I've used Google sheet.
 8. Created visualizations like boxplot, histogram, scatterplot, bar charts and regplot to get detailed view of the dataset.
 9. Saved the data frame as a csv file to work later for regression analysis and model building.
 
-## Summary of the Exploratory Data Analaysis: 
+### Summary of the Exploratory Data Analaysis: 
 
 1. The dataset doesn't contain any missing value but has 3008 duplicated values. We've removed those and created a new dataset df_raw with 11991 rows.
 
@@ -193,7 +193,7 @@ The HR department can look further into the matter by asking the following quest
 
 The False negatives may cause the company to spend more resources on an employee who decides to leave. The False positives may cause the company to think an employee will leave and won't put resources on this employee. False negatives will be worse for the company, false positives will be worse for employees.
 
-# Results of the models :
+## Results of the models :
 | Model | Accuracy | Recall | Precision | F1 Score | Confusion matrix |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Logistic Regression | 0.871 | 0.239 | 0.973 | 0.383 | ![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea) |
@@ -218,7 +218,7 @@ In this project we've -
 7. Compared to different salary levels, the employees who have a low salary are most likely to leave the company.
 8. Compared to different departments, the employees in Sales are most likely to leave the company.
 
-## Recommendation:
+## Recommendations:
 
 * Our dataset has much less data for the employees who were left than the employees who stayed. It also impacts our evaluation results and confusion matrix. We recommend gaining more data for the employees who were left before implementing the model in use.
 * We only have 10 departments in this dataset, it's better to know whether there are other departments in the company.
@@ -238,7 +238,7 @@ In this project we've -
 2. The data hasn't been cross-validated before implementing the models. Before testing the models on test data, they should be vigorously tested on training and validation set to ensure accurate and trustworthy performance of the models.
 3. We've used only 5 matrices for evaluating the performances of the models. There are many more hyperparameters and  matrices that will help us tune and evaluate a better performing model.  
 
-## List of References:
+# List of References:
 Phase 1 - Planning
 * [What is Employee Retention?](https://resources.workable.com/hr-terms/what-is-employee-retention)
 * [41 Employee Retention Ideas](https://thrivemap.io/employee-retention-ideas/)
