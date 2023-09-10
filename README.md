@@ -29,6 +29,7 @@ The Human Resource department at Salifort Motors wants to take some initiatives 
 5. Random forest
 6. XGBoost
 
+The entire project from collecting and validating the data, exploratory data analysis, building machine learning models to predict employee churn and communicating the results to the stakeholders is based on PACE workflow. PACE is an acronym; each one of the letters represents an actionable stage in a project: plan, analyze, construct, and execute.
 ![PACE workflow](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/cQcDvRmNS1Cpr_t3edsQIg_c359c3e9e9d64046a955cb85f2a1f8f1_ADA_R-142_PACE-Model.png?expiry=1694217600000&hmac=3LHlpiNEjbA8dqGGDpBZM16TzJr5j3b1Dy3b1IX2unI)
 
 # (P)ACE - PLAN - UNDERSTANDING THE DATA IN THE PROBLEM CONTEXT
@@ -37,7 +38,7 @@ The Human Resource department at Salifort Motors wants to take some initiatives 
 Salifort Motors is a fictional French-based alternative energy vehicle manufacturer. Its global workforce of over 100,000 employees research, design, construct, validate, and distribute electric, solar, algae, and hydrogen-based vehicles. Salifort’s end-to-end vertical integration model has made it a global leader at the intersection of alternative energy and automobiles.    
 
 ## Key Stakeholders:
-* Salifort’s senior leadership team
+* Salifort’s Senior Leadership team
 * Human Resources (HR) department team
 
 ## Statement of the Business Task:
@@ -49,7 +50,7 @@ The purpose of this project is to design a model that predicts whether an employ
 3. A jupyter notebook with all the codes
    
 ## About the Data Set:
-This project uses a dataset called **HR_capstone_dataset.csv** from [kaggle](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv). It represents 10 columns of self-reported information from employees of a multinational vehicle manufacturing corporation. The dataset contains 14,999 rows – each row is a different employee’s self-reported information and 10 columns
+This project uses a dataset called **HR_capstone_dataset.csv** from [Kaggle](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv). It represents 10 columns of self-reported information from employees of a multinational vehicle manufacturing corporation. The dataset contains 14,999 rows – each row is a different employee’s self-reported information and 10 columns.
 
 ### Data Dictionary:
 
@@ -89,7 +90,7 @@ For spellchecking and fixing column names I've used Google sheet.
 * Changed the column names *Work_accident*, *Department* and *time_spend_company*  to *work_accident*, *department* and *tenure* respectively.
 * Using Find and Replace changed the lower case department and salary names to proper case, so that the names are shown properly in graphs.
 * Checked for white space using trimming.
-* Saved the new dataset as **salifort_employee_retention_data** and I'm going to use it for the analysis.
+* Saved the new dataset as **salifort_employee_retention_data** to use it for the analysis.
 
 ## Python packages selected: 
 1. Operational Packages
@@ -119,7 +120,7 @@ For spellchecking and fixing column names I've used Google sheet.
 8. Created visualizations like boxplot, histogram, scatterplot, bar charts and regplot to get detailed view of the dataset.
 9. Saved the data frame as a csv file to work later for regression analysis and model building.
 
-### Summary of the Exploratory Data Analaysis: 
+### Summary of the Exploratory Data Analysis: 
 
 1. The dataset doesn't contain any missing value but has 3008 duplicated values. We've removed those and created a new dataset df_raw with 11991 rows.
 
@@ -167,6 +168,16 @@ The HR department can look further into the matter by asking the following quest
 3. Is number of project and promotions are given unjustly to employees?
 4. Why employees with high satisfaction level and evaluation score still left the company? Is there other factors affecting the employee retention?
 
+###  Selecting models for the project:
+Since our predictor variable 'left' is a binary/categorical variable (i.e., with only 2 possibilities, either 0 if stayed or 1 if left) we'll go for a classification model. 
+We'll build 4 models -
+1. Logistic Regression
+2. Decision Trees
+3. Random Forest
+4. XGBoost model
+
+We'll choose the one with highest evaluation scores and implement it to predict whether an employee will leave or not.
+
 # PA(C)E - CONSTRUCT AND EVALUATE MODEL
 
 ## Steps taken to build the models: 
@@ -183,24 +194,30 @@ The HR department can look further into the matter by asking the following quest
 3. **Precision Score**: The proportion of positive predictions that were true positives. 
 4. **F1 score**: It’s a harmonic mean of “precision” & “recall”, taking both the metrics into account.
 5. **Confusion matrix**: A graphical representation of how accurate a classifier is at predicting the labels for a categorical variable*
-   * True negatives: The count of observations that the classifier correctly predicted as False (0). In this case , the classifier will correctly predict the employees who didn't leave.
+   * True negatives: The count of observations that the classifier correctly predicted as False (0). In this case, the classifier will correctly predict the employees who didn't leave.
 
    * True positives: The count of observations that a classifier correctly predicted as True (1) i.e. the classifier will correctly predict the employees who left.
 
-   * False positives: The count of observations that a classifier incorrectly predicted as True (1) i.e. the classifier will predict employees as left but in reality who stayed.
+   * False positives: The count of observations that a classifier incorrectly predicted as True (1) i.e. the classifier will predict employees as left but in reality, who stayed.
 
-   * False negatives: The count of observations that a classifier incorrectly predicted as False (0). In this case, the classifier will incorrectly predict employees as stayd but in reality who left.
+   * False negatives: The count of observations that a classifier incorrectly predicted as False (0). In this case, the classifier will incorrectly predict employees as stayed but in reality, who left.
 
 The False negatives may cause the company to spend more resources on an employee who decides to leave. The False positives may cause the company to think an employee will leave and won't put resources on this employee. False negatives will be worse for the company, false positives will be worse for employees.
 
-## Results of the models :
+## Results of the models:
 | Model | Accuracy | Recall | Precision | F1 Score | Confusion matrix |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Logistic Regression | 0.871 | 0.239 | 0.973 | 0.383 | ![Screenshot (603)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/bf77a579-5ff5-4ed1-811a-e2865d86c9ea) |
-| Single Decision tree | 0.967 | 0.920 | 0.884 | 0.902 | ![dt wo grid](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/13bda057-1db3-441e-b606-474acf79a941) |
+| Single Decision tree without Hyperparameter tuning and Grid Search | 0.967 | 0.920 | 0.884 | 0.902 | ![dt wo grid](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/13bda057-1db3-441e-b606-474acf79a941) |
 | Decision Tree with Hyperparameter tuning and Grid Search | 0.982 | 0.932 | 0.961 | 0.946 | ![cm dt with grid (2)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/96a86fc7-05e8-4de8-9a71-853bcefe2f74) |
 | Random Forest | 0.984 | 0.916 | 0.987 | 0.950 | ![cm random forest (2)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/4975e7e2-771f-4092-aaa2-a1084e92821a) |
 | XG Boost Model | 0.985 | 0.928 | 0.979 | 0.953 | ![cm xgboost (2)](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/781987b6-0c9a-4df5-b0e0-32c7044b6a4e) |
+
+Now from the results of each model, we can see XGBoost model performed well with an f1 score of 0.953. We're using f1 score as our key evaluation matrix as it takes into account both recall and precision. Moreover, since our data is highly imbalanced (it contains more data on employees who stayed than who actually left), we do not emphasize on accuracy. Since majority of the datapoints consists of stayed employees, the models will naturally predict correctly the stayed employees. But we want to predict which employee will leave, i.e. on True Positives.
+
+We can see from the confusion matrices, that XGBoost which correctly predicted 462 left employees with only 10 false positives, is only next to a Single Decision Tree with Hyperparameter tuning which correctly predicted 464 left employees, but with more false positives (19).
+
+Therefore, between XGBoost and a single Decision Tree with Hyperparameter tuning, we'll opt for the former, as it has correctly classified 98.5% of the total data points.
 
 # PAC(E) - EXECUTE- INTERPRET MODEL AND SHARE STORY
 
@@ -209,7 +226,7 @@ The False negatives may cause the company to spend more resources on an employee
 ## Summary of the analysis:
 
 In this project we've - 
-1. Performed Exploratory Data Analysis on the HR_dataset provided by the HR team of Salifort Motors.
+1. Performed Exploratory Data Analysis on the HR_capstone_dataset provided by the HR team of Salifort Motors.
 2. Visualized the relations between various variables and found out our predictor variable 'left'.
 3. We've created 4 different models whose performance is evaluated by how many employees they've correctly predicted as left and stayed.
 4. Among the models, Logistic Regression model performed worst with an f1 score of 0.383.
@@ -231,7 +248,7 @@ In this project we've -
   We need to find the reasons in order to reduce the high rate of turnover. We are concerned about whether the projects have been given to employees fairly. We recommend the company to setup a policy that can overlook the entire wellbeing and performance of the employees.
 * In satisfaction_level, we knew the employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. And satisfaction level is the second important feature of driving employees' retention. Other than the points we just mentioned, we also recommend working on analysing the trends of satisfaction_level, to find out its correlation with other variables which hasn't been done in this project.
 * As the low level of salary is likely to lead to the retention of the company, we can work with this group more in order to increase their satisfaction level.
-* We also recommend to increase the chances of promotion across the departments and the salary levels.
+* We also recommend increasing the chances of promotion across the departments and the salary levels.
 
 ## Limitation of the project:
 1. Our dataset is imbalanced i.e. it has much less data for the employees who left than the employees who stayed. It also impacts our evaluation results and confusion matrix. Class Imbalance can be a huge disadvantage for building advanced machine learning models.
