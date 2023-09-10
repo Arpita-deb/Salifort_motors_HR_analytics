@@ -45,8 +45,8 @@ Salifort Motors is a fictional French-based alternative energy vehicle manufactu
 The purpose of this project is to design a model that predicts whether an employee will leave the company based on their job title, department, number of projects, average monthly hours, and any other relevant data points. Our goal is to analyze the key factors driving employee turnover, build an effective model, and share recommendations for next steps with the leadership team. 
 
 ## Deliverables:
-1. Project Proposal
-2. An executive summary with important insights and recommendations
+1. [Project Proposal](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/files/12567932/Salifort.Motors.Project.Proposal.pptx)
+2. [An executive summary with important insights and recommendations](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/10d137c5-8e37-4b88-8b2c-ffde573f68f9)
 3. A jupyter notebook with all the codes
    
 ## About the Data Set:
