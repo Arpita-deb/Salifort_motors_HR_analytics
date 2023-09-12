@@ -280,7 +280,6 @@ Phase 2 - Analysis
 * [10 things to do when conductiong your exploratory data analysis](https://medium.com/data-folks-indonesia/10-things-to-do-when-conducting-your-exploratory-data-analysis-eda-7e3b2dfbf812)
 * [Seaborn - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/seaborn-a-complete-data-visualization-guide)
 * [Matplotlib - A complete data visualization guide](https://www.kaggle.com/code/berkayalan/matplotlib-a-complete-data-visualization-guide)
-* [Plotly tutorial for beginners](https://www.kaggle.com/code/kanncaa1/plotly-tutorial-for-beginners#Line-Charts)
 * [Seaborn Heatmap](http://seaborn.pydata.org/generated/seaborn.heatmap.html)
 * [Seaborn Boxplot](https://seaborn.pydata.org/generated/seaborn.boxplot.html)
 
