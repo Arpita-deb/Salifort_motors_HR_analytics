@@ -129,12 +129,15 @@ For spellchecking and fixing column names I've used Google sheet.
 3. 'left' will be our target variable. We realize the majority class is about 83.4% of the data set, it is moderately imbalanced (~20%).
 
 4. There are 10 Departments in this dataset. The department of Sales has the highest number of employee retention.
+
 ![dept](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/78609a75-0f5b-4de2-b30a-d80466dcd04b)
 
 5. There are 3 salary levels in this dataset. Majority of the left employees have a low salary level, followed by medium and high. When the salary level goes up, the possibility of leaving is decreased.
+
 ![salary](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/11a7d3f0-49e5-4ef2-add2-2955f207f0ca)
 
 6. The employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. The lowest satisfaction level scores were more likely given by the employees who have left the company, but we still see numbers of stayed employees given very low satisfaction scores.
+
 ![satisfaction level](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/09b9f197-3dcf-43d4-a212-1872a51ec556)
 
 7. The employees who left the company had a similar but an average higher score in the last performance than the employees who stayed in the company. Majority of the employees stayed has a evaluation higher than 0.5. There are some employees who have low evaluation score, still they're working in the company. Majority of the employees who've left have a low evaluation score between 0.45 to 0.6 But some of them have higher evaluation score as well.
@@ -144,25 +147,31 @@ For spellchecking and fixing column names I've used Google sheet.
 ![performance score](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/876fd2d0-06d8-4e60-bf24-3e315455b0df)
 
 8. When the employees only have 2 projects, the possibility of turnover is the most compared to other numbers of projects. When the employees have 3 projects, the possibilities of turn over is smallest. In addition, all the employees are left when they have 7 projects. The chance of turn over increases as employees are tasked with more projects.
+
 ![project](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/4b588a20-c55a-4a08-8a69-2624dbab2c4a)
 
 9. In the histogram of Satisfaction Level, we saw some employees who've left the company giving higher scores of satisfaction. When the employees leave the company, the satisfaction level is very low, except when they have 7 projects. So the employees who've 7 projects were satisfied with the company but nonetheless left the company because of some other reasons.
     
 10. The employees who left the company had more average monthly work hours than the employees who stayed in the company. By checking the average_monthly_hour, we can find 96 was the minimum monthly working hour, and 310 was the maximum monthly working hour. 149 and 156 are the most frequent monthly working hours.
+
 ![hours](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/3bcb4876-3eb8-4c77-bc7a-09a5eccc0541)
 
 11. There is 63% of employees who worked over 176 hours/month. The percentage of employee who worked over 176 hours/month and left the company is around 14.56%.
 
 12. Working overtime can be a reason of low satisfaction level in employees and it might influence an employee's decision to leave.
+
 ![scatterplot](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/f089d6fe-ad74-4430-8c1f-202c085a821c)
 
 13. The employees who work in the company longer(tenure) tend to have more possibility of leaving.
+
 ![tenure](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/1153cdee-4a46-4305-b87e-9e489328c1c8)
 
 14. The employees who didn't experience an accident while at work were more likely to stay in the company.
+
 ![accident](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/4453b455-e16f-494f-a4ae-baca2fca202d)
 
 15. The employees who were promoted in the last 5 years were more likely to stay in the company.
+
 ![promotion](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/5a365ec3-8ef0-46ac-9f2d-6c1ece7e0cd1)
 
 16. 'satisfaction_level' has more relationship with left, compared to other variables. We see the lowest satisfaction level is below 0.1, and it has a large number of employees who had the similar rate. Other than that, there are also a large number of the employees who had a satisfaction level higher than 0.56.
