@@ -3,6 +3,10 @@
 
 ## Introduction:
 
+This project aimed to identify the factors that influence employee turnover at Salifort motors, a fictional manufacturing company. I analyzed the human resources data, which included variables such as monthly working hours, number of projects, promotion, department, and salary. I cleaned the data using Excel and performed exploratory data analysis (EDA) using Python packages such as Numpy, Panda, Matplotlib, Seaborn, and Sci-Kit learn. The EDA revealed that 63% of the employees worked overtime and that sales employees and employees with low salaries from various departments were more likely to quit. I've created five classification models namely Logistic Regression, Decision Tree with and without hyperparameter tuning, Random Forest, and XGBoost to correctly classify employees who'll leave or stay in the company. I, then evaluated the models using metrics such as accuracy, recall, precision, f1 score, and confusion matrix. XGBoost had the best performance, with 98.5% accuracy. The main reasons for employee turnover were: average monthly working hours, job satisfaction, number of projects, tenure, and salary. I suggested some solutions to improve employee retention, such as: reducing overtime, increasing promotion opportunities, enhancing career development, fostering a positive work culture, and rewarding employee achievements.
+
+### Employee Retention:
+
 Employee retention refers to the ability of a company to prevent employee turnover. In other words, it is the company's concerted efforts to retain their existing staff and keep their best employees on board in order to succeed as a business. Employee retention is often expressed as a statistic; the percentage of employees that remain in a company for a fixed time period (e.g. a quarter). To measure it, we use the following employee retention rate formula:
 
 <img src="https://resources.workable.com/wp-content/uploads/2019/08/employee_retention_formula-1.png">
@@ -19,7 +23,7 @@ The Human Resource department at Salifort Motors wants to take some initiatives 
 ## Tools used:
 1. Excel - for initial data cleaning
 2. Python - for Exploratory Data Analysis and building machine learning model
-3. Powerpoint - to create Project Proposal and executive summary
+3. Google Slides - to create Project Proposal and executive summary
 
 ## Methodologies used:
 1. Exploratory Data Analysis
@@ -37,7 +41,6 @@ The entire project from collecting and validating the data, exploratory data ana
 
 ## About the Company:
 Salifort Motors is a fictional French-based alternative energy vehicle manufacturer. Its global workforce of over 100,000 employees research, design, construct, validate, and distribute electric, solar, algae, and hydrogen-based vehicles. Salifort’s end-to-end vertical integration model has made it a global leader at the intersection of alternative energy and automobiles.    
-
 ## Key Stakeholders:
 * Salifort’s Senior Leadership team
 * Human Resources (HR) department team
@@ -129,7 +132,7 @@ For spellchecking and fixing column names I've used Google sheet.
 
 3. 'left' will be our target variable. We realize the majority class is about 83.4% of the data set, it is moderately imbalanced (~20%).
 
-4. There are 10 Departments in this dataset. The department of Sales has the highest number of employee retention.
+4. There are 10 Departments in this dataset. The department of Sales has the highest number of employee churn.
 
 ![dept](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/78609a75-0f5b-4de2-b30a-d80466dcd04b)
 
@@ -260,17 +263,32 @@ In this project we've -
 
 ## Recommendations:
 
-* Our dataset has much less data for the employees who were left than the employees who stayed. It also impacts our evaluation results and confusion matrix. We recommend gaining more data for the employees who were left before implementing the model in use.
+* Our dataset has much less data for the employees who were left than the employees who stayed. It also impacts our evaluation results and confusion matrix. We recommend gaining more data for the employees who left before implementing the model in use.
+
 * We only have 10 departments in this dataset, it's better to know whether there are other departments in the company.
+
 * For the salary, it's better to build this feature with numerical data that shows how much the employee earns in a certain period of time. The level of salary is not clear enough.
+
 * As we mentioned above, average_monthly_hours is the most important feature to drive employees' retention. Combining the EDA results, we found that 63% of employees in the company worked over time. Plus the employees who left the company had more average monthly work hours than the employees who stayed in the company. We recommend significant reducing in the chance of working over time.
+
 * The employees who left the company usually spent more time on the project, the reason can be:
   1) less investment on training, and upskilling the employees
   2) get more complicated projects that need more time of working
   3) less familiarity with the project
   We need to find the reasons in order to reduce the high rate of turnover. We are concerned about whether the projects have been given to employees fairly. We recommend the company to setup a policy that can overlook the entire wellbeing and performance of the employees.
+
 * In satisfaction_level, we knew the employees who left the company tended to have lower satisfaction levels than the employees who stayed in the company. And satisfaction level is the second important feature of driving employees' retention. Other than the points we just mentioned, we also recommend working on analysing the trends of satisfaction_level, to find out its correlation with other variables which hasn't been done in this project.
+
+  Some ways the company can increase employee's job satisfaction are -
+   * by providing opportunities for career advancement and growth
+   * by fostering a positive work culture that values respect, diversity, and feedback
+   * by recognizing and rewarding employee achievements and contributions
+   * by offering competitive compensation and benefits packages
+   * by ensuring job security and stability
+   * by promoting work-life balance and wellness initiatives
+
 * As the low level of salary is likely to lead to the retention of the company, we can work with this group more in order to increase their satisfaction level.
+
 * We also recommend increasing the chances of promotion across the departments and the salary levels.
 
 ## Limitation of the project:
