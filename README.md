@@ -30,7 +30,8 @@ The Human Resource department at Salifort Motors wants to take some initiatives 
 6. XGBoost
 
 The entire project from collecting and validating the data, exploratory data analysis, building machine learning models to predict employee churn and communicating the results to the stakeholders is based on PACE workflow. PACE is an acronym; each one of the letters represents an actionable stage in a project: plan, analyze, construct, and execute.
-![PACE workflow](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/cQcDvRmNS1Cpr_t3edsQIg_c359c3e9e9d64046a955cb85f2a1f8f1_ADA_R-142_PACE-Model.png?expiry=1694217600000&hmac=3LHlpiNEjbA8dqGGDpBZM16TzJr5j3b1Dy3b1IX2unI)
+
+![Pace](https://github.com/Arpita-deb/Salifort_motors_HR_analytics/assets/139372731/a392c404-8909-4167-ba55-da276f42a830)
 
 # (P)ACE - PLAN - UNDERSTANDING THE DATA IN THE PROBLEM CONTEXT
 
