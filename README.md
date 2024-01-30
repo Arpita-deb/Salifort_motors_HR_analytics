@@ -292,7 +292,7 @@ In this project we've -
 * We also recommend increasing the chances of promotion across the departments and the salary levels.
 
 ## Limitation of the project:
-1. Our dataset is imbalanced (~76%, i.e., 76% of total employees stayed at the company and only 24% left the company) i.e. it has much less data for the employees who left than the employees who stayed. It also impacts our evaluation results and confusion matrix. Class Imbalance can be a huge disadvantage for building advanced machine learning models.
+1. Our dataset is imbalanced (~83%, i.e., 83% of total employees stayed at the company and only 17% left the company) i.e. it has much less data for the employees who left than the employees who stayed. It also impacts our evaluation results and confusion matrix. Class Imbalance can be a huge disadvantage for building advanced machine learning models.
 2. The data hasn't been cross-validated before implementing the models. Before testing the models on test data, they should be vigorously tested on training and validation set to ensure accurate and trustworthy performance of the models.
 3. We've used only 5 matrices for evaluating the performances of the models. There are many more hyperparameters and  matrices that will help us tune and evaluate a better performing model.  
 
