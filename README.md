@@ -83,7 +83,7 @@ The data contains information that may help us find the answer to the key questi
 There is no external citation for this dataset. You can visit [kaggle](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv) for basic informations.
 
 ### Current:
-The dataset is created 2 years ago. Clearly it is outdated.
+The dataset was created 2 years ago. Clearly it is outdated.
 
 # P(A)CE - ANALYSIS -  EDA, CHECKING MODEL ASSUMPTIONS & SELECT MODEL
 
