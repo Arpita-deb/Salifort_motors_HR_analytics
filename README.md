@@ -3,9 +3,15 @@
 
 ## Introduction:
 
-This project is aimed to identify the factors that influence employee turnover at Salifort motors, a fictional manufacturing company. I analyzed the human resources data, which included variables such as monthly working hours, number of projects, promotion status, department, and salary. I cleaned the data using Excel and performed Exploratory Data Analysis (EDA) using Python packages such as Numpy, Pandas, Matplotlib, Seaborn, and Sci-Kit learn. The EDA revealed that 63% of the employees worked overtime and that Sales employees and employees with low salaries from various departments were more likely to quit. I've created 5 classification models namely Logistic Regression, Decision Tree with and without hyperparameter tuning, Random Forest, and XGBoost to correctly classify employees who'll leave or stay in the company. I, then evaluated the models using metrics such as accuracy, recall, precision, f1 score, and confusion matrix. The result shows that XGBoost had the best performance, with 98.5% accuracy. The main reasons for employee turnover were: high average monthly working hours, low job satisfaction, uneven distribution of projects,long tenure, and low salary. I suggested some solutions to improve employee retention, such as: reducing worktime, increasing promotional opportunities, enhancing career development, fostering a positive work culture, and rewarding employee achievements.
+This project is aimed to identify the factors influencing employee turnover at Salifort motors, a fictional manufacturing company. 
 
-### Employee Retention:
+Here, I analyzed the human resources data, which included variables such as monthly working hours, number of projects, promotion status, department, and salary. I cleaned the data using Excel and performed Exploratory Data Analysis (EDA) using Python packages such as Numpy, Pandas, Matplotlib, Seaborn, and Sci-Kit learn. 
+
+I've then created 5 classification models namely Logistic Regression, Decision Tree with and without hyperparameter tuning, Random Forest, and XGBoost to correctly classify employees who'll leave or stay in the company. Then I evaluated the models using metrics such as accuracy, recall, precision, f1 score, and confusion matrix. 
+
+Finally I summarized the results and presented the recommendations for Salifort’s Senior Leadership team and Human Resources (HR) team with an Executive Summary.
+
+## Employee Retention:
 
 Employee retention refers to the ability of a company to prevent employee turnover. In other words, it is the company's concerted efforts to retain their existing staff and keep their best employees on board in order to succeed as a business. Employee retention is often expressed as a statistic; the percentage of employees that remain in a company for a fixed time period (e.g. a quarter). To measure it, we use the following employee retention rate formula:
 
